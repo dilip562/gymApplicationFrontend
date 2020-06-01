@@ -1,0 +1,51 @@
+.home{
+    .left-section{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 15%;
+        // border: 1px solid red;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+        .logo{
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            line-height: 50px;
+            user-select: none;
+        }
+        .tabs{
+            width: 100%;
+            margin-top: 50px;
+            ul{
+                li{
+                    width: 100%;
+                    // text-align: center;
+                    padding-left: 30px;
+                    margin: 10px 0;
+                    a{
+                        text-decoration: none;
+                        h3{
+                            line-height: 50px;
+                            color: rgb(37, 37, 37);
+                            font-size: 20px;
+                            transition: 0.2s ease-in-out;
+                            cursor: pointer;
+                        }
+                        h3:hover{
+                            color: blue;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+    .main-section{
+        background-color: #F4F5FA;
+        height: 100vh;
+        margin-left: 15%;
+        padding: 20px;
+    }
+}
