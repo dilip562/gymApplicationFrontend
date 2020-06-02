@@ -44,7 +44,7 @@ const BarChart = () => {
     },[])
     return (
       <div style={{height:'100%', padding:'20px'}}>
-        <Bar data={data} height={"130%"} options={{ maintainAspectRatio: false }} />
+        <Bar data={data} height={"130%"} options={{ maintainAspectRatio: false, scales: { yAxes: [{ticks: {beginAtZero: true}}]} }} />
       </div>
     
     )

@@ -35,3 +35,14 @@ export const isAuthenticated = () => {
         return false
     }
 }
+
+export const isAdmin = () => {
+    if(typeof window !== undefined){
+        if(localStorage.getItem("jwt")){
+            if(JSON.parse(localStorage.getItem("jwt")).trainer.role === 2){
+                return true
+            }
+        }
+    }
+    return false
+}

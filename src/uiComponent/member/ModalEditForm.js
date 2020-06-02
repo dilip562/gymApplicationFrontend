@@ -84,7 +84,6 @@ const ModalEditForm = ({visible, setVisible,editId, editData,reload1, setReload1
       },[])
 
     useEffect(()=>{
-        console.log(data)   
         loadData()
     },[editData])
 

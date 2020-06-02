@@ -6,6 +6,7 @@ import Package from '../package/Package';
 import Membership from '../mambership/Mambership';
 import Trainer from '../trainer/Trainer';
 import Dashboard from '../dashboard/Dashboard'
+import { isAdmin } from '../../apiHandlers/authHandler';
 
 const MainSection = ({setActiveLink}) => {
     let {id} = useParams()
@@ -15,9 +16,9 @@ const MainSection = ({setActiveLink}) => {
     return(
         <div className="main-section">
             { id === "dashboard" && <Dashboard />}
-            { id === "member" &&  <Member />}
-            { id === "package" &&  <Package />}
-            { id === "trainer" &&  <Trainer/>}
+            { id === "member" && <Member />}
+            { id === "package" && isAdmin() &&  <Package />}
+            { id === "trainer" && isAdmin() &&  <Trainer/>}
             { id === "membership" &&  <Membership />}
         </div>
     )

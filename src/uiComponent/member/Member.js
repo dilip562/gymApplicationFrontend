@@ -3,16 +3,13 @@ import "./Member.scss"
 import { Button} from 'antd';
 import 'antd/dist/antd.css';
 import MainTable from './MainTable';
-import { isAuthenticated } from '../../apiHandlers/authHandler';
 import ModalAddForm from './ModalAddForm';
 
-const {trainer, token} = isAuthenticated()
 
 const Member = () => {
     
     const [reload,setReload] = useState(false);
     const [visible, setVisible] = useState(false);
-    const [loadPack, setLoadPack] = useState([])
     const showUserModal = () => {
         setVisible(true);
       };
@@ -33,7 +30,7 @@ const Member = () => {
             </div>
             <div className="dataSection">
                 {
-                    <MainTable reload = {reload} setReload={setReload}  setReload={setReload} loadPack={loadPack} />
+                    <MainTable reload = {reload} setReload={setReload}  setReload={setReload}/>
                 }
                 
             </div>
